@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type =text/css href="{{ url_for('static', filename='style.css') }}"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <!-- localStorage.setItem({{ demographic }}) -->
+  <!-- <script>
+    var d = {{demographic}}
+    var demo = JSON.stringify(d)
+  </script> -->
+</head>
+<body>
+  		<div class="container">
+  			<div class="row main">
+  				<div class="panel-heading">
+  	               <div class="panel-title text-center">
+  	               		<h1 class="title">College Recommender</h1>
+  	               		<hr />
+  	               	</div>
+  	            </div>
+  				<div class="main-login main-center">
+  					<form class="form-horizontal" method="POST" action="/predict">
+
+  						<div class="form-group">
+  							<label for="name1" class="cols-sm-2 control-label">Most Important Feature</label>
+  							<div class="cols-sm-10">
+  								<div class="input-group">
+  									<span class="input-group-addon"></span>
+                       <select name = 'first' class="form-control" id="sel1">
+                         <option>Future Earnings</option>
+                         <option>Completion rate</option>
+                         <option>Future Debt</option>
+                         <option>Loan Access</option>
+                       </select>
+  								</div>
+  							</div>
+  						</div>
+
+
+              <div class="form-group">
+  							<label for="name" class="cols-sm-2 control-label">2nd Feature</label>
+  							<div class="cols-sm-10">
+  								<div class="input-group">
+  									<span class="input-group-addon"></span>
+                       <select name = 'second' class="form-control" id="sel2">
+                         <option>Completion rate</option>
+                         <option>Future Earnings</option>
+                         <option>Future Debt</option>
+                         <option>Loan Access</option>
+                       </select>
+  								</div>
+  							</div>
+  						</div>
+
+              <div class="form-group">
+  							<label for="name" class="cols-sm-2 control-label">3rd Feature</label>
+  							<div class="cols-sm-10">
+  								<div class="input-group">
+  									<span class="input-group-addon"></span>
+                       <select name = 'third' class="form-control" id="sel3">
+                         <option>Future Debt</option>
+                         <option>Future Earnings</option>
+                         <option>Completion rate</option>
+                         <option>Loan Access</option>
+                       </select>
+  								</div>
+  							</div>
+  						</div>
+
+              <div class="form-group">
+  							<label for="name" class="cols-sm-2 control-label">Least Important Feature</label>
+  							<div class="cols-sm-10">
+  								<div class="input-group">
+  									<span class="input-group-addon"></span>
+                       <select name = 'fourth' class="form-control" id="sel4">
+                         <option>Loan Access</option>
+                         <option>Future Debt</option>
+                         <option>Future Earnings</option>
+                         <option>Completion rate</option>
+                       </select>
+  								</div>
+  							</div>
+  						</div>
+
+              <div class="col-sm-6 form-group">
+								<label>Max Tuition</label>
+								<input name = "tuition" type="text" placeholder="Enter Maximum Tuition Here.." class="form-control">
+                <input type="hidden" name="ethnicity" value={{ethnicity}}>
+              </div>
+
+  						<div class="form-group ">
+  							<button type="Next" class="btn btn-primary btn-lg btn-block login-button">Submit</button>
+  						</div>
+  						<!-- <div class="login-register">
+  				            <a href="index.php">Login</a>
+  				         </div> -->
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+
+  		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  	</body>
+  </html>
